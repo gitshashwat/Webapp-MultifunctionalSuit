@@ -1,0 +1,187 @@
+nav.navbar
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+
+    .navbar-brand
+        display: flex
+        align-items: center
+
+        img
+            max-height: 55px
+            padding: 0.25rem
+
+        color: $theme
+        text-decoration: none
+
+    .navbar-btn
+        display: none
+        background: transparent
+        border: none
+        padding: 0 1.5rem
+        .ion
+            font-size: 24px
+
+    .navbar-nav
+        display: flex
+        align-items: center
+        list-style: none
+
+        margin: 0
+        padding: 0
+
+        .nav-item
+            .nav-link
+                color: $gray-600
+                font-size: 0.85em
+                font-weight: 400
+                text-transform: uppercase
+                text-decoration: none
+                border-bottom: 3px solid transparent
+
+                display: block
+                padding: 1.40rem 1.25rem
+
+                transition: 0.5s color, 0.5s border-color
+
+                .ion
+                    vertical-align: top
+                    font-size: 15px
+                    margin-right: 5px
+
+                &:disabled
+                    color: $gray-500
+
+            .nav-button
+                background-color: $theme
+                color: $white
+
+            .button
+                background-color: $theme
+                color: $white
+                font-size: 0.85em
+                font-weight: 400
+                text-transform: uppercase
+                text-decoration: none
+                cursor: pointer
+
+                border-radius: $border-radius
+
+                display: block
+                padding: 0.5rem 1.5rem
+                margin: 0 0.5rem
+
+                transition: 0.5s background-color
+
+                &:hover
+                    background-color: $theme
+
+                .ion
+                    vertical-align: top
+                    font-size: 15px
+                    margin-right: 5px
+
+            &.active .nav-link,
+            &:active .nav-link,
+            & .router-link-exact-active
+                background-color: $theme-light
+                border-bottom-color: $theme
+                color: $theme
+            &:hover .nav-link,
+            &:focus .nav-link
+                border-bottom-color: $theme
+                color: $theme
+                &.nav-button:hover
+                    background-color: darken($theme, 5%)
+                    color: $white
+                    border-color: transparent
+
+    .nav-right,
+    .nav-bottom
+        justify-content: flex-end
+        flex-grow: 1
+
+    .nav-left,
+    .nav-top
+        justify-content: flex-start
+        flex-grow: 1
+
+    .nav-center
+        justify-content: center
+        flex-grow: 1
+
+    .fgrow-0
+        flex-grow: 0
+
+    .navbar-form
+        display: flex
+        align-items: center
+
+        ::-webkit-input-placeholder
+            color: $white
+            font-family: 'Source Sans Pro', sans-serif
+        :-ms-input-placeholder
+            color: $white
+            font-family: 'Source Sans Pro', sans-serif
+        ::placeholder
+            color: $white
+            font-family: 'Source Sans Pro', sans-serif
+
+        input
+            padding: 0.5rem 1rem
+            border: 2px solid $white
+            border-radius: $border-radius
+
+            margin: 0.35rem 1rem
+            &[type="search"]
+                min-width: 20rem
+            &:hover,
+            &:focus,
+            &:active
+                outline: none
+                border-color: $theme-dark
+
+    &.navbar-aside
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+
+        height: 100%
+
+        .navbar-brand
+            img
+                max-height: 45px
+
+        .navbar-nav
+            flex-direction: column
+
+            .nav-item
+                padding: 0
+                a
+                    border-bottom: 0
+                    border-left: 3px solid transparent
+
+                &:hover a
+                    border-left-color: $theme-dark
+                &.active a,
+                & a.router-link-exact-active
+                    border-left-color: $theme-dark
+
+@media screen and (max-width: 960px)
+    .navbar-btn
+        display: block !important
+        cursor: pointer
+    .navbar-nav
+        display: none !important
+        position: absolute
+        top: 4rem
+        left: 0
+        right: 0
+        z-index: 9
+        background: #FFF
+        flex-direction: column
+        align-items: stretch !important
+    .navbar-btn:hover + .navbar-nav,
+    .navbar-nav:hover
+        display: flex !important

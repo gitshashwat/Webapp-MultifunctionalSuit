@@ -1,0 +1,33 @@
+.card
+    display: flex
+    flex-direction: column
+    border: 1px solid $gray-200
+    border-radius: $border-radius
+    box-shadow: $box-shadow
+    overflow: hidden
+
+    .card-title
+        background-color: $gray-100
+        color: $gray-600
+        font-size: 0.85em
+        font-weight: 400
+        letter-spacing: 1px
+        text-transform: uppercase
+        padding: 1rem
+        margin: 0
+        border-bottom: 1px solid $gray-200
+
+    .card-content
+        background-color: $white
+        color: $gray-600
+
+.dark-mode
+    .card
+        border: 0 !important
+        .card-title
+            background-color: #2a2d35 !important
+            color: #c0c4c8 !important
+            border: 0 !important
+        .card-content
+            background-color: rgba(68, 70, 79, 0.75) !important
+            color: #c0c4c8 !important

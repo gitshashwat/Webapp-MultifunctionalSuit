@@ -1,0 +1,68 @@
+@for $i from 0 through 5
+    .p-#{$i}
+        padding: $i + 0rem !important
+    .m-#{$i}
+        margin: $i + 0rem !important
+
+    .pt-#{$i}
+        padding-top: $i + 0rem !important
+    .mt-#{$i}
+        margin-top: $i + 0rem !important
+
+    .pb-#{$i}
+        padding-bottom: $i + 0rem !important
+    .mb-#{$i}
+        margin-bottom: $i + 0rem !important
+
+    .pl-#{$i}
+        padding-left: $i + 0rem !important
+    .ml-#{$i}
+        margin-left: $i + 0rem !important
+
+    .pr-#{$i}
+        padding-right: $i + 0rem !important
+    .mr-#{$i}
+        margin-right: $i + 0rem !important
+
+.m-auto
+    margin: auto
+.p-auto
+    padding: auto
+
+@for $i from 0 through 10
+    .vh-#{$i * 10}
+        height: calc(#{$i * 10}vh - 172px)
+        overflow: auto
+
+    .vw-#{$i * 10}
+        width: calc(#{$i * 10}vh - 172px)
+        overflow: auto
+
+@for $i from 0 through 10
+    .wmax-#{$i * 100}
+        max-width: #{$i * 100}px
+
+    .wmin-#{$i * 100}
+        min-width: #{$i * 100}px
+
+    .hmax-#{$i * 10}
+        max-height: #{$i * 10}px
+
+    .hmin-#{$i * 10}
+        min-height: calc(#{$i * 10}vh - 63px - 16px)
+
+.box-shadow
+    box-shadow: $box-shadow
+
+.l-height-2
+    line-height: 2
+
+.hidden
+    display: none !important
+
+.p-relative
+    position: relative
+
+.img-responsive
+    width: 100%
+    height: auto

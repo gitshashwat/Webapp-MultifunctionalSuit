@@ -1,0 +1,70 @@
+table
+    overflow: auto
+    width: 100%
+    border-spacing: 0
+    thead tr
+        background: $theme
+        color: $white
+    thead tr th
+        font-size: 0.95rem
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 0.75px
+        border: none
+        padding: 0.75rem 0.5rem
+    tbody tr:nth-child(2n)
+        background: $gray-700
+    tbody tr td
+        font-size: 0.95rem
+        color: $white
+        padding: 0.75rem 0.5rem
+        text-align: center
+    thead tr th:first-child,
+    tbody tr td:first-child
+        border-radius: $border-radius 0 0 $border-radius
+    thead tr th:last-child,
+    tbody tr td:last-child
+        border-radius: 0 $border-radius $border-radius 0
+    &.table-hover
+        tbody tr:hover
+            background: $gray-900
+            cursor: pointer
+    &.table-left
+        tbody tr td
+            text-align: left
+    &.table-clear
+        tbody tr
+            background: transparent
+    &.table-compact
+        tbody tr td
+            padding: 0.25rem 0.5rem
+    &.table-auto
+        width: auto
+
+table.table-light
+    thead tr
+        background: $theme
+        color: $white
+    tbody tr
+        background: $gray-100
+    tbody tr td
+        color: $black
+    tbody tr:nth-child(2n)
+        background: $gray-200
+        color: $black
+    thead tr th:first-child
+        border-radius: $border-radius 0 0 $border-radius
+    tbody tr td:first-child
+        border-radius: 0
+    thead tr th:last-child
+        border-radius: 0 $border-radius $border-radius 0
+    tbody tr td:last-child
+        border-radius: 0
+    tbody tr:last-child td:first-child
+        border-radius: 0 0 0 $border-radius
+    tbody tr:last-child td:last-child
+        border-radius: 0 0 $border-radius 0
+    &.table-hover
+        tbody tr:hover
+            background: $gray-400
+            cursor: pointer

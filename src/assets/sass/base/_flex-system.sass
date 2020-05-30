@@ -1,0 +1,118 @@
+// FLEX SYSTEM
+// ===========
+.container
+    max-width: 1024px
+    margin: auto
+    padding: 0
+
+.container-fluid
+    padding: 0 1rem
+
+.d-flex
+    display: flex
+    justify-content: center
+    align-items: center
+
+.d-none
+    display: none
+
+.d-block
+    display: block
+
+.row
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin: 0 -0.5rem
+
+    .column
+        margin: 0.5rem
+        padding: 0.5rem
+
+@for $i from 1 through 12
+    .column-#{$i}
+        width: calc(8.3333333333% * #{$i} - (1rem * 2))
+
+    .column-#{$i}.p-0
+        width: calc(8.3333333333% * #{$i} - (0.5rem * 2))
+
+// UTILITY
+.justify-content-center
+    justify-content: center
+
+.align-items-center
+    align-items: center
+
+.justify-content-flex-start
+    justify-content: flex-start
+
+.align-items-flex-start
+    align-items: flex-start
+
+.justify-content-flex-end
+    justify-content: flex-end
+
+.align-items-flex-end
+    align-items: flex-end
+
+.justify-content-space-between
+    justify-content: space-between
+
+.justify-content-space-around
+    justify-content: space-around
+
+.align-items-space-stretch
+    align-items: stretch
+
+.f-column
+    flex-direction: column
+
+.f-rcolumn
+    flex-direction: column-reverse
+
+.f-row
+    flex-direction: row
+
+.f-rrow
+    flex-direction: row-reverse
+
+.f-wrap
+    flex-wrap: wrap
+    & > div,
+    & > button
+        margin-top: 1rem
+.f-nowrap
+    flex-wrap: nowrap
+
+// MEDIA QUERIES
+@media only screen and (max-width: 1440px)
+    @for $i from 1 through 12
+        .column-lg-#{$i}
+            width: calc(8.3333333333% * #{$i} - (1rem * 2))
+
+        .column-lg-#{$i}.p-0
+            width: calc(8.3333333333% * #{$i} - (0.5rem * 2))
+
+@media only screen and (max-width: 1024px)
+    @for $i from 1 through 12
+        .column-md-#{$i}
+            width: calc(8.3333333333% * #{$i} - (1rem * 2))
+
+        .column-md-#{$i}.p-0
+            width: calc(8.3333333333% * #{$i} - (0.5rem * 2))
+
+@media only screen and (max-width: 768px)
+    @for $i from 1 through 12
+        .column-sm-#{$i}
+            width: calc(8.3333333333% * #{$i} - (1rem * 2))
+
+        .column-sm-#{$i}.p-0
+            width: calc(8.3333333333% * #{$i} - (0.5rem * 2))
+
+@media only screen and (max-width: 425px)
+    @for $i from 1 through 12
+        .column-xs-#{$i}
+            width: calc(8.3333333333% * #{$i} - (1rem * 2))
+
+        .column-xs-#{$i}.p-0
+            width: calc(8.3333333333% * #{$i} - (0.5rem * 2))

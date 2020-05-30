@@ -1,0 +1,89 @@
+nav.tabs
+    overflow: hidden
+
+    .tabs-nav
+        list-style: none
+        display: flex
+        border-radius: $border-radius $border-radius 0 0
+        overflow: hidden
+
+        margin: 0
+        padding: 0
+
+        .nav-item
+            .nav-link
+                background-color: $gray-100
+                color: $gray-600
+                font-size: 0.85em
+                font-weight: 400
+                letter-spacing: 0.65px
+
+                text-transform: uppercase
+                text-align: center
+                text-decoration: none
+
+                display: block
+                padding: 1rem 1.5rem
+
+                border-top: 3px solid transparent
+                border-left: 1px solid transparent
+                border-right: 1px solid transparent
+                border-bottom: 1px solid $gray-200
+
+                transition: 0.5s background, 0.5s color
+
+                &:hover
+                    background-color: $theme
+                    color: $white
+
+                &.active
+                    background-color: $white
+                    color: $theme
+                    border-top-color: $theme
+                    border-left-color: $white
+                    border-right-color: $white
+                    border-bottom-color: transparent
+
+            &:last-child
+                background-color: $gray-100
+                border-bottom: 1px solid $gray-200
+                flex-grow: 1
+
+            &:first-child .nav-link.active
+                border-left-color: transparent
+
+.tab-content
+    background-color: $white
+    padding: 1rem
+    border-radius: 0 0 $border-radius $border-radius
+    overflow: hidden
+    border-top: 0px
+    min-height: -webkit-fill-available
+
+.dark-mode
+    .tabs-nav .nav-item
+        .nav-link
+            background-color: #2a2d35 !important
+            color: $gray-400 !important
+            border-bottom-color: #2a2d35 !important
+            &.active
+                background-color: transparent !important
+                color: $theme !important
+                border-top-color: $theme !important
+                border-left-color: transparent !important
+                border-right-color: transparent !important
+                border-bottom-color: transparent !important
+        &:last-child
+            background-color: #2a2d35 !important
+            border-bottom-color: #2a2d35 !important
+
+    .tab-content
+        background-color: transparent !important
+        border: 0 !important
+
+@media screen and (max-width: 736px)
+    nav.tabs .tabs-nav
+        flex-wrap: wrap
+        justify-content: flex-end
+        .nav-item
+            flex-grow: 1

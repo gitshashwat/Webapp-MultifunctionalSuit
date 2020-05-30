@@ -1,0 +1,20 @@
+aside
+    background: $theme
+    color: $white
+    box-shadow: $box-shadow
+
+    position: fixed
+    top: 73px
+    bottom: 0
+    left: 0
+    z-index: 5
+    display: none
+
+    &.active
+        display: block
+
+    &.active ~ main
+        padding-left: 57px
+
+    &.active ~ footer
+        left: 57px !important

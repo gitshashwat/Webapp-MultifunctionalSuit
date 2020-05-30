@@ -1,0 +1,179 @@
+@import '_vue-select'
+@import '~vue-ionicons/ionicons.scss'
+
+@import '_normalize'
+@import '_variable'
+
+@import '_utility'
+
+@import 'base/_color'
+@import 'base/_typography'
+@import 'base/_flex-system'
+
+@import 'components/layout/_header'
+@import 'components/layout/_footer'
+@import 'components/layout/_aside'
+
+@import 'components/utility/_loader'
+@import 'components/utility/_toast'
+
+@import 'module/_form'
+@import 'module/_table'
+@import 'module/_navbar'
+@import 'module/_tabs'
+@import 'module/_card'
+
+*,
+*:hover,
+*:focus,
+*:active
+    outline: none
+    user-select: none
+    &::-moz-selection
+        color: $theme
+        background: $black
+    &::selection
+        color: $theme
+        background: $black
+
+body
+    background: $gray-100
+    font-family: $font-family
+    font-weight: 300
+    &.dark-mode
+        background-image: radial-gradient(top, circle farthest-corner, #393b45 0%, #2d3038 70%)
+        background-image: -moz-radial-gradient(top, circle farthest-corner, #393b45 0%, #2d3038 70%)
+        background-image: -o-radial-gradient(top, circle farthest-corner, #393b45 0%, #2d3038 70%)
+        background-image: -webkit-radial-gradient(top, circle farthest-corner, #393b45 0%, #2d3038 70%)
+        background-position: 50%, 50%
+
+main
+    margin: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    &.container-fluid
+        min-height: calc(100vh - 63px)
+    &.container
+        min-height: calc(100vh - 63px)
+
+.template-container
+    width: 100%
+
+.demo-box
+    border: 1px solid $gray-100
+    color: $gray-100
+
+.tooltip
+    position: absolute
+    z-index: 1070
+    display: block
+    margin: 0
+    min-width: 150px
+
+    font-style: normal
+    font-weight: 400
+    font-size: 0.75em
+    line-height: 1.5
+    line-break: auto
+
+    text-align: left
+    text-align: start
+    text-decoration: none
+    text-shadow: none
+    text-transform: none
+
+    letter-spacing: normal
+    word-break: normal
+    word-spacing: normal
+    word-wrap: break-word
+    white-space: normal
+
+    opacity: 0
+    background-color: $gray-200
+    color: $gray-600
+    border: 1px solid $gray-600
+    border-radius: $border-radius
+    padding: 0.5rem 1rem
+    box-shadow: $box-shadow-lg
+    table
+        tr td
+            border: 0
+            padding: 0.25rem
+        tr td:first-child
+            font-weight: 500
+
+.highlight-summary
+    font-size: 16px
+    line-height: 1.5
+    &::first-letter
+        text-transform: capitalize
+    span strong
+        font-weight: 500
+        font-size: 20px
+    highlight
+        font-weight: 500
+        color: $primary
+        ul li,
+        & + ul li
+            margin: 0.5rem 0
+        ul li:nth-child(n+6),
+        & + ul li:nth-child(n+6)
+            display: none
+    pos_highlight
+        font-weight: 500
+        color: $success
+    neg_highlight
+        font-weight: 500
+        color: $danger
+
+.style-chooser
+    margin: 0 0 0.5rem
+    .vs__search::placeholder,
+    .vs__dropdown-toggle,
+    .vs__dropdown-menu
+        background: lighten($theme, 48%)
+        border: none
+        color: #394066
+        text-transform: lowercase
+        font-variant: small-caps
+    .vs__dropdown-toggle
+        padding: 0 0 5.5px
+    .vs__clear,
+    .vs__open-indicator
+        fill: #394066
+    .vs__dropdown-menu
+        height: 150px
+
+.pagination
+    margin-top: 2rem
+    display: flex
+    justify-content: center
+    list-style: none
+    li
+        background: $gray-700
+        margin: 0 0.25rem
+        a
+            display: block
+            padding: 0.5rem 0.75rem
+    li.active,
+    li.active:hover
+        background: $theme
+    li:hover
+        background: $gray-900
+        cursor: pointer
+    li:first-child
+        border-radius: 4px 0 0 4px
+    li:last-child
+        border-radius: 0 4px 4px 0
+
+.dark-mode
+    .tooltip
+        background-color: #2a2d35 !important
+        color: #c0c4c8 !important
+        border-color: #c0c4c8 !important
+
+.vue-slider
+    padding: 0 !important
+    .vue-slider-mark-label
+        color: $white

@@ -1,0 +1,71 @@
+.toast-container
+    position: fixed
+    bottom: 0
+    right: 0
+    width: 300px
+    padding: 1rem
+    z-index: 9999
+
+.toast
+    border-radius: $border-radius
+    border: 1px solid transparent
+    padding: 1rem 1.5rem
+    position: relative
+    margin-top: 1rem
+    cursor: pointer
+    .toast-title
+        font-size: 0.85em
+        font-weight: 500
+        text-transform: uppercase
+        margin: 0 0 0.25rem
+    .toast-content
+        p
+            font-size: 0.85em
+            margin: 0 0 0.25rem
+            line-height: 1.25
+    .close
+        position: absolute
+        right: 1rem
+        top: 1rem
+        cursor: pointer
+
+    &.toast-default
+        background: $secondary
+        border-color: darken($secondary, 15%)
+        transition: 0.5s background
+        .toast-title,
+        .toast-content p,
+        .close
+            color: $white
+        &:hover
+            background: darken($secondary, 5%)
+    &.toast-success
+        background: $success
+        border-color: darken($success, 15%)
+        transition: 0.5s background
+        .toast-title,
+        .toast-content p,
+        .close
+            color: $white
+        &:hover
+            background: darken($success, 5%)
+    &.toast-error
+        background: $danger
+        border-color: darken($danger, 15%)
+        transition: 0.5s background
+        .toast-title,
+        .toast-content p,
+        .close
+            color: $white
+        &:hover
+            background: darken($danger, 5%)
+    &.toast-warning
+        background: $warning
+        border-color: darken($warning, 15%)
+        transition: 0.5s background
+        .toast-title,
+        .toast-content p,
+        .close
+            color: $white
+        &:hover
+            background: darken($warning, 5%)
